@@ -1,0 +1,7 @@
+中文書名,連結網址
+GBIF資料適用性之白皮書,https://portal.taibif.tw/media/article/download/GBIF_final_1201.pdf
+2012-2016 GBIF 策略計畫 掌握未來,https://portal.taibif.tw/media/article/download/2012-2016GBIF%E7%AD%96%E7%95%A5%E8%A8%88%E7%95%AB%E6%8E%8C%E6%8F%A1%E6%9C%AA%E4%BE%86.pdf
+資料清理之原則與方法,https://portal.taibif.tw/media/article/download/DataCleaning_Chinese.pdf
+資料品質原則,https://portal.taibif.tw/media/article/download/DataQuality_Chinese.pdf
+GBIF資料入口網站實務操作手冊,https://portal.taibif.tw/media/article/download/tutorial_2.pdf
+物種出現原始資料之用途,https://portal.taibif.tw/media/article/download/UsesPrimaryData_Chinese.pdf
