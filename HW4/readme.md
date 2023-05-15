@@ -1,5 +1,5 @@
 ## HW4-Customer Review Sentiment Analysis Bot
-----
+
 ### LINE BOT介面
 ![擷取5](./pic/%E6%93%B7%E5%8F%965.PNG)
 
