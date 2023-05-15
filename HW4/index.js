@@ -2,9 +2,7 @@
 const line = require('@line/bot-sdk'),
       express = require('express'),
       axios = require('axios'),
-      configGet = require('config');//({
-//        path: '/Users/anderson/Desktop/Data Science/config/default.json' //指定檔案的絕對路徑
-//      });
+      configGet = require('config');
 const {TextAnalyticsClient, AzureKeyCredential} = require("@azure/ai-text-analytics");
 
 //Line config
@@ -32,9 +30,6 @@ async function MS_TextSentimentAnalysis(thisEvent){
     const analyticsClient = new TextAnalyticsClient(endpoint, new AzureKeyCredential(apiKey));
     let documents = [];
     documents.push(thisEvent.message.text);
-    // documents.push("我覺得櫃檯人員很親切");
-    // documents.push("熱水都不熱，爛死了，很生氣！");
-    // documents.push("房間陳設一般般");
     //const results = await analyticsClient.analyzeSentiment(documents);
     const results = await analyticsClient.analyzeSentiment(documents,"zh-Hant",{
       includeOpinionMining: true
@@ -47,7 +42,6 @@ async function MS_TextSentimentAnalysis(thisEvent){
       "confidenceScore":results[0].confidenceScores[results[0].sentiment],
       "opinionText":""
     };
-
     if (results[0].sentences[0].opinions.length!=0){
       newData.opinionText = results[0].sentences[0].opinions[0].target.text;
     }
@@ -59,13 +53,11 @@ async function MS_TextSentimentAnalysis(thisEvent){
       },
       data:newData
     };
-
     axios(axios_add_data)
     .then(function(response){
       console.log(JSON.stringify(response.data));
     })
     .catch(function(){console.log("error");});
-
 
     //回傳內容改變
     const state = results[0].sentiment;
@@ -108,8 +100,6 @@ async function MS_TextSentimentAnalysis(thisEvent){
       text: `十分感謝您傳送${feedbackType}語氣的語句， 其指數達${score}，${feedback}`
     };
     return client.replyMessage(thisEvent.replyToken, [echo1,echo2,echo3]);
-
-
 }
 
 app.post('/callback', line.middleware(configLine),(req, res)=>{
@@ -126,7 +116,6 @@ function handleEvent(event){
   if(event.type !== 'message' || event.message.type !== 'text'){
     return Promise.resolve(null);
   }
-
   MS_TextSentimentAnalysis(event)
     .catch((err) => {
       console.error("Error:", err);
