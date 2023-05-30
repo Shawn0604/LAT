@@ -1,6 +1,6 @@
 ## HW5-MS Cognitive Services Computer Vision API
 ## 功能
-### 藉由線上的圖像辨識，輸出該圖片最具有信度的描述
+### 藉由線上圖像辨識，自動判斷家庭照照片，並輸出最具有信度的描述
 <br/>
 
 ## 重點code
