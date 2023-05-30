@@ -9,8 +9,3 @@
 * 系級:數學系三年級
 
 * 課程筆記區、作業連結區、專題連結區
-
-
-## 作業練習區
-
-* [第一周作業](https://github.com/Shawn0604/LAT/tree/main/%E7%AC%AC%E4%B8%80%E5%91%A8%E4%BD%9C%E6%A5%AD)
