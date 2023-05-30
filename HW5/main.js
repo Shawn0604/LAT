@@ -36,15 +36,9 @@ function processImage() {
         //顯示JSON內容
         $("#responseTextArea").val(JSON.stringify(data, null, 2));
         $("#picDescription").empty();
-        // for (var x = 0; x < data.description.captions.length;x++){
-        //     $("#picDescription").append(data.description.captions[x].text + "<br>");
-        // }
         // 根據可信度排序描述
         var sortedCaptions = data.description.captions.sort(function(a, b) {
             return b.confidence - a.confidence;
-        // for (var x = 0; x < data.description.captions.length;x++){
-        //     $("#picDescription").append(data.description.captions[x].text + "<br>");
-        // }
         });
 
         // 選擇最有最高可信度的一句話
